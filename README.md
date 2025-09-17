@@ -1,5 +1,5 @@
 ## Hi welcome to my github👋 
-### I am Bowen Lv, a senior student at Tongji University since 2021.
+### I am Bowen Lv, a phd student at Tsinghua University since 2022.
 
 - 🔭 I’m currently working on ZhiPu AI.
 - 🌱 I’m currently learning LLM and RL.
