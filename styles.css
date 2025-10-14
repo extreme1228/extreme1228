@@ -75,6 +75,56 @@ body {
     z-index: 1;
 }
 
+/* Profile Image Styles */
+.profile-image-container {
+    margin-bottom: 2rem;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 15%;
+    border: 5px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.2),
+        0 0 0 10px rgba(255, 255, 255, 0.1),
+        inset 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    animation: profileFloat 0.8s ease-out, glow 3s ease-in-out infinite;
+}
+
+.profile-image:hover {
+    transform: scale(1.08) translateY(-5px);
+    box-shadow: 
+        0 12px 40px rgba(0, 0, 0, 0.3),
+        0 0 0 12px rgba(255, 255, 255, 0.15),
+        inset 0 0 20px rgba(0, 0, 0, 0.1);
+    border-color: rgba(255, 255, 255, 1);
+}
+
+@keyframes profileFloat {
+    from {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes glow {
+    0%, 100% {
+        filter: brightness(1);
+    }
+    50% {
+        filter: brightness(1.1);
+    }
+}
+
 .name {
     font-size: 3rem;
     font-weight: 700;
@@ -410,6 +460,12 @@ body {
         padding: 3rem 1.5rem 2rem;
     }
 
+    .profile-image {
+        width: 170px;
+        height: 170px;
+        border-width: 4px;
+    }
+
     .name {
         font-size: 2.25rem;
     }
@@ -441,6 +497,12 @@ body {
 }
 
 @media (max-width: 480px) {
+    .profile-image {
+        width: 150px;
+        height: 150px;
+        border-width: 3px;
+    }
+
     .name {
         font-size: 1.875rem;
     }

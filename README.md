@@ -15,7 +15,7 @@ Large Language Models (LLMs), Reinforcement Learning (RL), and GUI Agents.
 - Developing **Task-Free Learning** frameworks for autonomous LLM-based agents.
 ---
 
-📝 **Selected Publications**
+📝 **Publications**
 
 - Di Zhang, **Bowen Lv**, *et al.*  
   **AgentRL: Scaling Agentic Reinforcement Learning with a Multi-Turn, Multi-Task Framework.**  
