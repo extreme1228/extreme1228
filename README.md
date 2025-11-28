@@ -17,15 +17,19 @@ Large Language Models (LLMs), Reinforcement Learning (RL), and GUI Agents.
 
 📝 **Publications**
 
+
 - Di Zhang, **Bowen Lv**, *et al.*  
+  **Focus on What Matters: Separated Models for Visual-Based RL Generalization.**  
+  *NeurIPS 2024.*  
+  [[arixiv]](https://arxiv.org/abs/2410.10834)
+
+  
+- Hanchen Zhang, Xiao Liu, **Bowen Lv**, *et al. *  
   **AgentRL: Scaling Agentic Reinforcement Learning with a Multi-Turn, Multi-Task Framework.**  
   *Preprint, 2025.*  
   [[arixiv]](https://arxiv.org/abs/2510.04206)
 
-- Hanchen Zhang, Xiao Liu, **Bowen Lv**, *et al.*  
-  **Focus on What Matters: Separated Models for Visual-Based RL Generalization.**  
-  *NeurIPS 2024.*  
-  [[arixiv]](https://arxiv.org/abs/2410.10834)
+
 
 
 
