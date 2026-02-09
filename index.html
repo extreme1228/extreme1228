@@ -8,156 +8,182 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <!-- Header Section -->
-        <header class="header">
-            <div class="header-content">
-                <div class="profile-image-container">
-                    <img src="assets/lvbowen.jpg" alt="Bowen Lv" class="profile-image">
+    <div class="page">
+        <header class="hero" id="top">
+            <nav class="nav">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#research" class="nav-link">Research</a>
+                <a href="#publications" class="nav-link">Publications</a>
+                <a href="#blog" class="nav-link">Blog</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="hero-grid">
+                <div class="hero-text">
+                    <p class="eyebrow">Personal homepage</p>
+                    <h1 class="name">Bowen Lv</h1>
+                    <p class="title">Ph.D. Student @ Tsinghua University</p>
+                    <p class="subtitle">Research in LLMs, RL, and GUI agents. I share notes, papers, and projects here.</p>
+                    <div class="hero-actions">
+                        <a href="mailto:1486404293@qq.com" class="btn btn-primary">Email</a>
+                        <a href="https://scholar.google.com/citations?user=5JW6fqwAAAAJ&hl=zh-CN" target="_blank" class="btn btn-ghost">Google Scholar</a>
+                        <a href="https://github.com/extreme1228" target="_blank" class="btn btn-ghost">GitHub</a>
+                    </div>
+                    <div class="hero-meta">
+                        <div>
+                            <p class="meta-label">Focus</p>
+                            <p class="meta-value">LLM Agents + RL Generalization</p>
+                        </div>
+                        <div>
+                            <p class="meta-label">Current</p>
+                            <p class="meta-value">Tsinghua University, 2025 - Present</p>
+                        </div>
+                        <div>
+                            <p class="meta-label">Education</p>
+                            <p class="meta-value">Tongji University, 2021 - 2025</p>
+                        </div>
+                    </div>
                 </div>
-                <h1 class="name">Bowen Lv</h1>
-                <p class="title">Ph.D. Student @ Tsinghua University</p>
-                <p class="subtitle">Since 2025</p>
-                
-                <div class="social-links">
-                    <a href="https://scholar.google.com/citations?user=5JW6fqwAAAAJ&hl=zh-CN" target="_blank" class="social-link">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/>
-                        </svg>
-                        Google Scholar
-                    </a>
-                    <a href="https://github.com/extreme1228" target="_blank" class="social-link">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
-                        </svg>
-                        GitHub
-                    </a>
-                    <a href="mailto:1486404293@qq.com" class="social-link">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                        </svg>
-                        Email
-                    </a>
+                <div class="hero-card">
+                    <img src="assets/lvbowen.jpg" alt="Bowen Lv" class="profile-image">
+                    <div class="hero-card-body">
+                        <h2>Research Snapshot</h2>
+                        <p>Building generalizable agents with task-free learning and RL frameworks.</p>
+                        <div class="tag-list">
+                            <span class="tag">LLMs</span>
+                            <span class="tag">Reinforcement Learning</span>
+                            <span class="tag">GUI Agents</span>
+                            <span class="tag">Generalization</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>
 
-        <!-- Main Content -->
-        <main class="main-content">
-            <!-- Education Section -->
-            <section class="section">
-                <h2 class="section-title">
-                    <span class="icon">🎓</span>
-                    Education
-                </h2>
-                <div class="education-list">
-                    <div class="education-item">
-                        <h3>Ph.D. in Computer Science</h3>
-                        <p class="institution">Tsinghua University</p>
-                        <p class="duration">2025 – Present</p>
+        <main>
+            <section class="section" id="about">
+                <div class="section-header">
+                    <p class="section-kicker">About</p>
+                    <h2>Research-driven, writing-focused</h2>
+                </div>
+                <div class="two-col">
+                    <div class="card">
+                        <h3>What I do</h3>
+                        <p>I explore how agentic systems can learn and generalize with minimal task-specific supervision. My recent work focuses on GUI agents, reinforcement learning, and scalable multi-task frameworks.</p>
+                        <p>This site is a living notebook: a place to share ideas, summaries, and research progress.</p>
                     </div>
-                    <div class="education-item">
-                        <h3>B.Eng. in Computer Science</h3>
-                        <p class="institution">Tongji University</p>
-                        <p class="duration">2021 – 2025</p>
+                    <div class="card highlight">
+                        <h3>Highlights</h3>
+                        <ul class="list">
+                            <li>Ph.D. in Computer Science at Tsinghua University.</li>
+                            <li>Research interests: LLM agents, RL generalization, GUI interactions.</li>
+                            <li>Publications in NeurIPS 2024 and preprints on arXiv.</li>
+                        </ul>
                     </div>
                 </div>
             </section>
 
-            <!-- Research Interests Section -->
-            <section class="section">
-                <h2 class="section-title">
-                    <span class="icon">🔬</span>
-                    Research Interests
-                </h2>
-                <div class="tags">
-                    <span class="tag">Large Language Models (LLMs)</span>
-                    <span class="tag">Reinforcement Learning (RL)</span>
-                    <span class="tag">GUI Agents</span>
+            <section class="section" id="research">
+                <div class="section-header">
+                    <p class="section-kicker">Research</p>
+                    <h2>Current directions</h2>
+                </div>
+                <div class="grid-3">
+                    <article class="card">
+                        <h3>GUI Agents</h3>
+                        <p>Understanding how agents perceive and act in interfaces, and how to evaluate their generalization across tasks.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Task-Free Learning</h3>
+                        <p>Designing frameworks that learn behaviors without explicit task labels, enabling scalable agent training.</p>
+                    </article>
+                    <article class="card">
+                        <h3>RL Generalization</h3>
+                        <p>Building separated and modular models to improve transfer in visually complex environments.</p>
+                    </article>
                 </div>
             </section>
 
-            <!-- Current Research Section -->
-            <section class="section">
-                <h2 class="section-title">
-                    <span class="icon">💡</span>
-                    Current Research
-                </h2>
-                <ul class="research-list">
-                    <li>Exploring <strong>GUI Agents</strong> from the perspective of <strong>Reinforcement Learning</strong> and generalization.</li>
-                    <li>Developing <strong>Task-Free Learning</strong> frameworks for autonomous LLM-based agents.</li>
-                </ul>
-            </section>
-
-            <!-- Publications Section -->
-            <section class="section">
-                <h2 class="section-title">
-                    <span class="icon">📝</span>
-                    Publications
-                </h2>
-                <div class="publications">
-                    <div class="publication-item">
-                        <h3>AgentRL: Scaling Agentic Reinforcement Learning with a Multi-Turn, Multi-Task Framework</h3>
-                        <p class="authors">Hanchen Zhang, Xiao Liu, <strong>Bowen Lv</strong>, <em>et al.</em></p>
-                        <p class="venue">Preprint, 2025</p>
-                        <a href="https://arxiv.org/abs/2510.04206" target="_blank" class="paper-link">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                <polyline points="15 3 21 3 21 9"></polyline>
-                                <line x1="10" y1="14" x2="21" y2="3"></line>
-                            </svg>
-                            arXiv
-                        </a>
-                    </div>
-                    <div class="publication-item">
-                        <h3>Focus on What Matters: Separated Models for Visual-Based RL Generalization</h3>
-                        <p class="authors">Di Zhang, <strong>Bowen Lv</strong>, <em>et al.</em></p>
-                        <p class="venue">NeurIPS 2024</p>
-                        <a href="https://arxiv.org/abs/2410.10834" target="_blank" class="paper-link">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                <polyline points="15 3 21 3 21 9"></polyline>
-                                <line x1="10" y1="14" x2="21" y2="3"></line>
-                            </svg>
-                            arXiv
-                        </a>
-                    </div>
+            <section class="section" id="publications">
+                <div class="section-header">
+                    <p class="section-kicker">Publications</p>
+                    <h2>Selected papers</h2>
+                </div>
+                <div class="stack">
+                    <article class="paper card">
+                        <div>
+                            <h3>AgentRL: Scaling Agentic Reinforcement Learning with a Multi-Turn, Multi-Task Framework</h3>
+                            <p class="muted">Hanchen Zhang, Xiao Liu, <strong>Bowen Lv</strong>, et al.</p>
+                            <p class="venue">Preprint, 2025</p>
+                        </div>
+                        <a href="https://arxiv.org/abs/2510.04206" target="_blank" class="btn btn-ghost">arXiv</a>
+                    </article>
+                    <article class="paper card">
+                        <div>
+                            <h3>Focus on What Matters: Separated Models for Visual-Based RL Generalization</h3>
+                            <p class="muted">Di Zhang, <strong>Bowen Lv</strong>, et al.</p>
+                            <p class="venue">NeurIPS 2024</p>
+                        </div>
+                        <a href="https://arxiv.org/abs/2410.10834" target="_blank" class="btn btn-ghost">arXiv</a>
+                    </article>
                 </div>
             </section>
 
-            <!-- Contact Section -->
-            <section class="section contact-section">
-                <h2 class="section-title">
-                    <span class="icon">📫</span>
-                    Contact
-                </h2>
-                <div class="contact-info">
-                    <p>
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                        </svg>
-                        <a href="mailto:1486404293@qq.com">1486404293@qq.com</a>
-                    </p>
-                    <p>
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
-                        </svg>
-                        <a href="https://github.com/extreme1228" target="_blank">GitHub Profile</a>
-                    </p>
-                    <p>
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/>
-                        </svg>
-                        <a href="https://scholar.google.com/citations?user=5JW6fqwAAAAJ&hl=zh-CN" target="_blank">Google Scholar</a>
-                    </p>
+            <section class="section" id="blog">
+                <div class="section-header">
+                    <p class="section-kicker">Blog</p>
+                    <h2>Notes, essays, and external posts</h2>
+                </div>
+                <div class="grid-3 blog-grid">
+                    <article class="card blog-card">
+                        <p class="blog-meta">PhD · 博一上半年总结</p>
+                        <h3>PhD 博一上半年总结</h3>
+                        <p>暂时整理的阶段性回顾，之后会更新为完整内容。</p>
+                    </article>
+                    <article class="card blog-card">
+                        <p class="blog-meta">RL · LLM</p>
+                        <h3>From Traditional RL to LLM RL</h3>
+                        <p>从传统强化学习走向 LLM 强化学习的阶段性梳理。</p>
+                    </article>
+                    <article class="card blog-card">
+                        <p class="blog-meta">Link</p>
+                        <h3>Later Updates</h3>
+                        <p>完成内容后会更新到这里。</p>
+                        <a href="/blog" class="text-link">Go to blog</a>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section" id="contact">
+                <div class="section-header">
+                    <p class="section-kicker">Contact</p>
+                    <h2>Stay in touch</h2>
+                </div>
+                <div class="two-col">
+                    <div class="card">
+                        <h3>Reach out</h3>
+                        <p class="muted">For collaborations, talks, or research discussions.</p>
+                        <div class="contact-list">
+                            <a href="mailto:1486404293@qq.com">1486404293@qq.com</a>
+                            <a href="https://github.com/extreme1228" target="_blank">GitHub Profile</a>
+                            <a href="https://scholar.google.com/citations?user=5JW6fqwAAAAJ&hl=zh-CN" target="_blank">Google Scholar</a>
+                        </div>
+                    </div>
+                    <div class="card highlight">
+                        <h3>Open for</h3>
+                        <ul class="list">
+                            <li>Research collaborations in LLM agents.</li>
+                            <li>Discussions about RL benchmarks and evaluation.</li>
+                            <li>Invited talks and guest lectures.</li>
+                        </ul>
+                    </div>
                 </div>
             </section>
         </main>
 
-        <!-- Footer -->
         <footer class="footer">
             <p>&copy; 2025 Bowen Lv. All rights reserved.</p>
         </footer>
@@ -166,4 +192,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Manager | Bowen Lv</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page">
+        <header class="hero" id="top">
+            <nav class="nav">
+                <a href="/" class="nav-link">Back to Home</a>
+                <a href="#editor" class="nav-link">Editor</a>
+                <a href="#posts" class="nav-link">Posts</a>
+                <a href="#settings" class="nav-link">Settings</a>
+            </nav>
+
+            <div class="hero-grid">
+                <div class="hero-text">
+                    <p class="eyebrow">Blog Manager</p>
+                    <h1 class="name">Write, publish, and organize</h1>
+                    <p class="subtitle">Manage drafts, publish new posts, and link external articles from one place.</p>
+                    <div class="hero-actions">
+                        <button class="btn btn-primary" id="create-post">New Blog Post</button>
+                        <button class="btn btn-ghost" id="save-post">Save Draft</button>
+                        <button class="btn btn-ghost" id="publish-post">Publish</button>
+                    </div>
+                </div>
+                <div class="hero-card">
+                    <div class="hero-card-body">
+                        <h2>Blog status</h2>
+                        <p class="muted">Connected to a lightweight Flask backend. Posts are stored in SQLite.</p>
+                        <div class="tag-list">
+                            <span class="tag">Drafts</span>
+                            <span class="tag">Published</span>
+                            <span class="tag">External Links</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="section" id="editor">
+                <div class="section-header">
+                    <p class="section-kicker">Editor</p>
+                    <h2>Create a new post</h2>
+                </div>
+                <div class="two-col">
+                    <div class="card">
+                        <label class="field">
+                            <span>Title</span>
+                            <input type="text" id="post-title" placeholder="Post title">
+                        </label>
+                        <label class="field">
+                            <span>Category</span>
+                            <select id="post-category">
+                                <option value="notes">Research Notes</option>
+                                <option value="reading">Reading</option>
+                                <option value="external">External</option>
+                            </select>
+                        </label>
+                        <label class="field">
+                            <span>Date</span>
+                            <input type="date" id="post-date">
+                        </label>
+                        <label class="field">
+                            <span>External URL (optional)</span>
+                            <input type="url" id="post-url" placeholder="https://">
+                        </label>
+                    </div>
+                    <div class="card">
+                        <label class="field">
+                            <span>Content</span>
+                            <textarea id="post-content" rows="12" placeholder="Write your blog content here..."></textarea>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="posts">
+                <div class="section-header">
+                    <p class="section-kicker">Posts</p>
+                    <h2>Your drafts and publications</h2>
+                </div>
+                <div class="blog-controls">
+                    <button class="chip is-active" data-filter="all">All</button>
+                    <button class="chip" data-filter="draft">Drafts</button>
+                    <button class="chip" data-filter="published">Published</button>
+                </div>
+                <div class="stack" id="post-list"></div>
+            </section>
+
+            <section class="section" id="settings">
+                <div class="section-header">
+                    <p class="section-kicker">Settings</p>
+                    <h2>Manage content</h2>
+                </div>
+                <div class="two-col">
+                    <div class="card">
+                        <h3>Export</h3>
+                        <p class="muted">Download your posts as JSON for backup.</p>
+                        <button class="btn btn-ghost" id="export-posts">Export JSON</button>
+                    </div>
+                    <div class="card highlight">
+                        <h3>Import</h3>
+                        <p class="muted">Restore posts from a JSON backup.</p>
+                        <input type="file" id="import-posts" accept="application/json">
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 Bowen Lv. Blog Manager</p>
+        </footer>
+    </div>
+
+    <script src="blog.js"></script>
+</body>
+</html>

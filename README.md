@@ -24,7 +24,7 @@ Large Language Models (LLMs), Reinforcement Learning (RL), and GUI Agents.
   [[arixiv]](https://arxiv.org/abs/2410.10834)
 
   
-- Hanchen Zhang, Xiao Liu, **Bowen Lv**, *et al. *  
+- Hanchen Zhang, Xiao Liu, **Bowen Lv**, *et al.*  
   **AgentRL: Scaling Agentic Reinforcement Learning with a Multi-Turn, Multi-Task Framework.**  
   *Preprint, 2025.*  
   [[arixiv]](https://arxiv.org/abs/2510.04206)
