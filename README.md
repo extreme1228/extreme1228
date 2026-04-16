@@ -42,7 +42,7 @@ Large Language Models (LLMs), Reinforcement Learning (RL), and GUI Agents.
 ---
 
 📫 **Contact**
-📧 1486404293@qq.com  
+📧 lvbowen1228@gmail.com  /  1486404293@qq.com  
 🔗 [GitHub Profile](https://github.com/extreme1228)  
 📄 [Google Scholar](https://scholar.google.com/citations?user=5JW6fqwAAAAJ&hl=zh-CN)
 
