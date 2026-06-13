@@ -8,37 +8,43 @@
 
 🔬 **Research Interests**
 
-Large Language Models (LLMs), Reinforcement Learning (RL), and GUI Agents.
+Large Language Model (LLM) post-training, Reinforcement Learning (RL), and GUI / Computer-Use Agents.
 
 💡 **Current Research**
-- Exploring **GUI Agents** from the perspective of **Reinforcement Learning** and generalization.
-- Developing **Task-Free Learning** frameworks for autonomous LLM-based agents.
+- **ScaleCUA** — scaling computer-use agents with verifiable task synthesis and efficient online RL (open-source SOTA on OSWorld / ScienceBoard).
+- **Agentic RL systems** — asynchronous, train–inference-decoupled online RL for multi-task, multi-turn agents.
+- One year at **Zhipu AI** on large-model post-training and GUI Agent RL.
 ---
 
 📝 **Publications**
 
-<!-- - Xueqiao Sun, Xiao Liu, **Bowen Lv**, *et al.*  
+- **Bowen Lv**, Zehan Qi
+  **ScaleCUA: Scaling Computer Use Agents with Verifiable Task Synthesis and Efficient Online RL** *(first author)*
+  *Preprint, 2026.* — 68.7% OSWorld / 54.0% ScienceBoard (open-source SOTA)
+
+- Xueqiao Sun, Xiao Liu, **Bowen Lv**, *et al.*
   **KARL: Reinforcement Learning for LLM Agents on Multi-Turn Knowledge-Intensive Agentic Tasks**
-  *ACL 2026 main conference*
-  [[openreview]]() -->
+  *ACL 2026 main conference.*
 
 - Wenyi Hong, Xiaotao Gu, ... , **Bowen Lv**, ... , GLM-V Team
   **GLM-5V-Turbo: Toward a Native Foundation Model for Multimodal Agents**
   *Preprint, 2026.*  
-  [[arixiv]](https://arxiv.org/abs/2604.26752)
+  [[arxiv]](https://arxiv.org/abs/2604.26752)
 
 - Hanchen Zhang, Xiao Liu, **Bowen Lv**, *et al.*  
   **AgentRL: Scaling Agentic Reinforcement Learning with a Multi-Turn, Multi-Task Framework.**  
   *Preprint, 2025.*  
-  [[arixiv]](https://arxiv.org/abs/2510.04206)
+  [[arxiv]](https://arxiv.org/abs/2510.04206)
 
 - Di Zhang, **Bowen Lv**, *et al.*  
   **Focus on What Matters: Separated Models for Visual-Based RL Generalization.**  
   *NeurIPS 2024.*  
-  [[arixiv]](https://arxiv.org/abs/2410.10834)
+  [[arxiv]](https://arxiv.org/abs/2410.10834)
 
 
 📝 **Blogs**
+
+- [Paper Notes 每日论文阅读与点评](https://zhuanlan.zhihu.com/p/2042682217600745976)
 
 - [From Traditional RL to LLM RL 理论推导与工程改进](https://zhuanlan.zhihu.com/p/1997363850849300572)
 

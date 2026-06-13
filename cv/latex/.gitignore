@@ -1,0 +1,10 @@
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+# build-output PDFs (final copies live in cv/)
+resume_zh.pdf
+resume_en.pdf

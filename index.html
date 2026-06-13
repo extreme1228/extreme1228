@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bowen Lv - Ph.D. Student @ Tsinghua University">
-    <title>Bowen Lv | Ph.D. Student</title>
+    <meta name="description" content="Bowen Lv (吕博文) - Ph.D. Student @ Tsinghua University. LLM post-training, reinforcement learning, and computer-use agents. First author of ScaleCUA.">
+    <title>Bowen Lv | Ph.D. Student @ Tsinghua University</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,6 +16,7 @@
             <nav class="nav">
                 <a href="#about" class="nav-link">About</a>
                 <a href="#research" class="nav-link">Research</a>
+                <a href="#experience" class="nav-link">Experience</a>
                 <a href="#publications" class="nav-link">Publications</a>
                 <a href="#blog" class="nav-link">Blog</a>
                 <a href="#contact" class="nav-link">Contact</a>
@@ -26,16 +27,17 @@
                     <p class="eyebrow">Personal homepage</p>
                     <h1 class="name">Bowen Lv</h1>
                     <p class="title">Ph.D. Student @ Tsinghua University</p>
-                    <p class="subtitle">Research in LLMs, RL, and GUI agents. I share notes, papers, and projects here.</p>
+                    <p class="subtitle">Research in LLM post-training, reinforcement learning, and GUI / computer-use agents. First author of <strong>ScaleCUA</strong>; one year at Zhipu AI on large-model post-training and GUI Agent RL.</p>
                     <div class="hero-actions">
-                        <a href="mailto:1486404293@qq.com" class="btn btn-primary">Email</a>
+                        <a href="cv/Bowen-Lv-CV-2026.pdf" target="_blank" class="btn btn-primary">CV (EN)</a>
+                        <a href="cv/吕博文-简历-2026.pdf" target="_blank" class="btn btn-ghost">简历 (中文)</a>
+                        <a href="mailto:lvbowen1228@gmail.com" class="btn btn-ghost">Email</a>
                         <a href="https://scholar.google.com/citations?user=5JW6fqwAAAAJ&hl=zh-CN" target="_blank" class="btn btn-ghost">Google Scholar</a>
-                        <a href="https://github.com/extreme1228" target="_blank" class="btn btn-ghost">GitHub</a>
                     </div>
                     <div class="hero-meta">
                         <div>
                             <p class="meta-label">Focus</p>
-                            <p class="meta-value">LLM Agents + RL Generalization</p>
+                            <p class="meta-value">Computer-Use Agents + Online RL</p>
                         </div>
                         <div>
                             <p class="meta-label">Current</p>
@@ -51,12 +53,12 @@
                     <img src="assets/lvbowen.jpg" alt="Bowen Lv" class="profile-image">
                     <div class="hero-card-body">
                         <h2>Research Snapshot</h2>
-                        <p>Building generalizable agents with task-free learning and RL frameworks.</p>
+                        <p>Scaling computer-use agents with verifiable task synthesis and efficient online RL.</p>
                         <div class="tag-list">
-                            <span class="tag">LLMs</span>
+                            <span class="tag">LLM Post-Training</span>
                             <span class="tag">Reinforcement Learning</span>
-                            <span class="tag">GUI Agents</span>
-                            <span class="tag">Generalization</span>
+                            <span class="tag">Computer-Use Agents</span>
+                            <span class="tag">Agentic RL</span>
                         </div>
                     </div>
                 </div>
@@ -72,15 +74,16 @@
                 <div class="two-col">
                     <div class="card">
                         <h3>What I do</h3>
-                        <p>I explore how agentic systems can learn and generalize with minimal task-specific supervision. My recent work focuses on GUI agents, reinforcement learning, and scalable multi-task frameworks.</p>
-                        <p>This site is a living notebook: a place to share ideas, summaries, and research progress.</p>
+                        <p>I work on scaling LLM-based agents with reinforcement learning — building the data pipelines, sampling strategies, and training systems that let computer-use agents learn from verifiable online interaction.</p>
+                        <p>This site is a living notebook: a place to share ideas, paper notes, and research progress.</p>
                     </div>
                     <div class="card highlight">
                         <h3>Highlights</h3>
                         <ul class="list">
-                            <li>Ph.D. in Computer Science at Tsinghua University.</li>
-                            <li>Research interests: LLM agents, RL generalization, GUI interactions.</li>
-                            <li>Publications in NeurIPS 2024 and preprints on arXiv.</li>
+                            <li>Ph.D. in Computer Science at Tsinghua University (KEG Lab).</li>
+                            <li>First author of <strong>ScaleCUA</strong> — open-source SOTA on OSWorld (68.7%) and ScienceBoard (54.0%).</li>
+                            <li>One year at <strong>Zhipu AI</strong> on LLM post-training and GUI Agent RL.</li>
+                            <li>Publications at NeurIPS 2024, ACL 2026, and preprints on arXiv.</li>
                         </ul>
                     </div>
                 </div>
@@ -93,16 +96,37 @@
                 </div>
                 <div class="grid-3">
                     <article class="card">
-                        <h3>GUI Agents</h3>
-                        <p>Understanding how agents perceive and act in interfaces, and how to evaluate their generalization across tasks.</p>
+                        <h3>Computer-Use Agents</h3>
+                        <p>Verifiable task synthesis and online RL for agents that perceive and act on real GUIs, scaling to open-source SOTA on OSWorld and ScienceBoard.</p>
                     </article>
                     <article class="card">
-                        <h3>Task-Free Learning</h3>
-                        <p>Designing frameworks that learn behaviors without explicit task labels, enabling scalable agent training.</p>
+                        <h3>Agentic RL Systems</h3>
+                        <p>Asynchronous, train–inference-decoupled RL frameworks with multi-task, multi-turn training and high-concurrency rollout over Dockerized environments.</p>
                     </article>
                     <article class="card">
-                        <h3>RL Generalization</h3>
-                        <p>Building separated and modular models to improve transfer in visually complex environments.</p>
+                        <h3>Auto Post-Training</h3>
+                        <p>Multi-agent systems that automate the agent post-training loop end-to-end: data collection, environment adaptation, task construction, rollout, and quality auditing.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section" id="experience">
+                <div class="section-header">
+                    <p class="section-kicker">Experience</p>
+                    <h2>Industry research</h2>
+                </div>
+                <div class="stack">
+                    <article class="card">
+                        <div class="exp-head">
+                            <h3>Zhipu AI (智谱) — Research Intern</h3>
+                            <span class="venue">Feb 2025 – Present</span>
+                        </div>
+                        <p class="muted">LLM post-training &amp; GUI / computer-use agent RL · KEG collaboration</p>
+                        <ul class="list">
+                            <li>Built core agentic-RL infrastructure: <strong>AgentRL</strong>, a from-scratch, highly asynchronous, train–inference-decoupled online RL framework with Dockerized multi-environment deployment and high-concurrency rollout for multi-task, multi-turn training.</li>
+                            <li>Led verifiable task synthesis and online RL for computer-use agents — the <strong>VeriGen</strong> pipeline, <strong>Frontier Sampling</strong>, and <strong>Visual Context Segmentation</strong> — reaching open-source SOTA (<strong>ScaleCUA</strong>, first author).</li>
+                            <li>Leading <strong>Auto-Post-Train (APT)</strong> — an <strong>AI-for-AI, self-improving</strong> multi-agent system that fully automates the agent post-training pipeline: data collection, environment adaptation, task construction, rollout, quality auditing, and model training, so models keep self-improving with minimal human intervention.</li>
+                        </ul>
                     </article>
                 </div>
             </section>
@@ -113,13 +137,14 @@
                     <h2>Selected papers</h2>
                 </div>
                 <div class="stack">
-                    <article class="paper card">
+                    <article class="paper card featured">
                         <div>
-                            <h3>GLM-5V-Turbo: Toward a Native Foundation Model for Multimodal Agents</h3>
-                            <p class="muted">Wenyi Hong, Xiaotao Gu, ... , <strong>Bowen Lv</strong>, ... , GLM-V Team</p>
-                            <p class="venue">Preprint, 2026</p>
+                            <p class="paper-badge">Featured · First author</p>
+                            <h3>ScaleCUA: Scaling Computer Use Agents with Verifiable Task Synthesis and Efficient Online RL</h3>
+                            <p class="muted"><strong>Bowen Lv</strong> (first author)</p>
+                            <p>A unified framework pairing verifiable task synthesis (the <strong>VeriGen</strong> pipeline) with efficient online RL (<strong>Frontier Sampling</strong> + <strong>Visual Context Segmentation</strong>). With Qwen3.5-9B it reaches open-source SOTA on both benchmarks.</p>
+                            <p class="venue">Preprint, 2026 · 68.7% OSWorld / 54.0% ScienceBoard — open-source SOTA</p>
                         </div>
-                        <a href="https://arxiv.org/abs/2604.26752" target="_blank" class="btn btn-ghost">arXiv</a>
                     </article>
                     <article class="paper card">
                         <div>
@@ -131,11 +156,26 @@
                     </article>
                     <article class="paper card">
                         <div>
+                            <h3>KARL: Reinforcement Learning for LLM Agents on Multi-Turn Knowledge-Intensive Agentic Tasks</h3>
+                            <p class="muted">Xueqiao Sun, Xiao Liu, <strong>Bowen Lv</strong>, et al.</p>
+                            <p class="venue">ACL 2026 (Main Conference)</p>
+                        </div>
+                    </article>
+                    <article class="paper card">
+                        <div>
                             <h3>Focus on What Matters: Separated Models for Visual-Based RL Generalization</h3>
                             <p class="muted">Di Zhang, <strong>Bowen Lv</strong>, et al.</p>
                             <p class="venue">NeurIPS 2024</p>
                         </div>
                         <a href="https://arxiv.org/abs/2410.10834" target="_blank" class="btn btn-ghost">arXiv</a>
+                    </article>
+                    <article class="paper card">
+                        <div>
+                            <h3>GLM-5V-Turbo: Toward a Native Foundation Model for Multimodal Agents</h3>
+                            <p class="muted">Wenyi Hong, Xiaotao Gu, ... , <strong>Bowen Lv</strong>, ... , GLM-V Team</p>
+                            <p class="venue">Preprint, 2026</p>
+                        </div>
+                        <a href="https://arxiv.org/abs/2604.26752" target="_blank" class="btn btn-ghost">arXiv</a>
                     </article>
                 </div>
             </section>
@@ -159,10 +199,10 @@
                         <a href="https://zhuanlan.zhihu.com/p/1997363850849300572" target="_blank" rel="noopener noreferrer" class="text-link">Read on Zhihu</a>
                     </article>
                     <article class="card blog-card">
-                        <p class="blog-meta">Link</p>
-                        <h3>Later Updates</h3>
-                        <p>完成内容后会更新到这里。</p>
-                        <a href="/blog" class="text-link">Go to blog</a>
+                        <p class="blog-meta">Paper Notes · 持续更新</p>
+                        <h3>每日论文阅读与点评</h3>
+                        <p>LLM、RL、Agent 方向的日更论文笔记与个人点评，全部托管在知乎。</p>
+                        <a href="https://zhuanlan.zhihu.com/p/2042682217600745976" target="_blank" rel="noopener noreferrer" class="text-link">Read on Zhihu</a>
                     </article>
                 </div>
             </section>
@@ -177,17 +217,18 @@
                         <h3>Reach out</h3>
                         <p class="muted">For collaborations, talks, or research discussions.</p>
                         <div class="contact-list">
-                            <a href="mailto:1486404293@qq.com">1486404293@qq.com</a>
                             <a href="mailto:lvbowen1228@gmail.com">lvbowen1228@gmail.com</a>
-                            <a href="https://github.com/extreme1228" target="_blank">GitHub Profile</a>
+                            <a href="mailto:1486404293@qq.com">1486404293@qq.com</a>
+                            <a href="cv/Bowen-Lv-CV-2026.pdf" target="_blank">Curriculum Vitae (EN, PDF)</a>
+                            <a href="cv/吕博文-简历-2026.pdf" target="_blank">个人简历 (中文, PDF)</a>
                             <a href="https://scholar.google.com/citations?user=5JW6fqwAAAAJ&hl=zh-CN" target="_blank">Google Scholar</a>
                         </div>
                     </div>
                     <div class="card highlight">
                         <h3>Open for</h3>
                         <ul class="list">
-                            <li>Research collaborations in LLM agents.</li>
-                            <li>Discussions about RL benchmarks and evaluation.</li>
+                            <li>Research collaborations on computer-use agents and agentic RL.</li>
+                            <li>Discussions about RL training systems, benchmarks, and evaluation.</li>
                             <li>Invited talks and guest lectures.</li>
                         </ul>
                     </div>
@@ -196,7 +237,7 @@
         </main>
 
         <footer class="footer">
-            <p>&copy; 2025 Bowen Lv. All rights reserved.</p>
+            <p>&copy; 2026 Bowen Lv. All rights reserved.</p>
         </footer>
     </div>
 

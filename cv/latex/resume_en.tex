@@ -1,0 +1,147 @@
+% !TEX program = xelatex
+% Bowen Lv — Curriculum Vitae (English) — compile with xelatex
+\documentclass[10pt,a4paper]{article}
+
+%==================== Fonts ====================
+\usepackage{fontspec}
+\setmainfont{texgyretermes}[
+  Extension = .otf, UprightFont = *-regular, BoldFont = *-bold,
+  ItalicFont = *-italic, BoldItalicFont = *-bolditalic]
+\setsansfont{texgyreheros}[
+  Extension = .otf, UprightFont = *-regular, BoldFont = *-bold,
+  ItalicFont = *-italic, BoldItalicFont = *-bolditalic]
+% Chinese fallback for the name only (macOS system fonts)
+\usepackage{xeCJK}
+\setCJKmainfont{Songti SC}[BoldFont={Heiti SC}]
+
+%==================== Layout ====================
+\usepackage[a4paper,top=0.85cm,bottom=0.8cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage[dvipsnames,table]{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{fontawesome5}
+\usepackage[hidelinks]{hyperref}
+\usepackage{ragged2e}
+
+\definecolor{accent}{RGB}{31,78,214}
+\definecolor{accentd}{RGB}{18,46,120}
+\definecolor{inkc}{RGB}{27,36,51}
+\definecolor{mutedc}{RGB}{91,107,130}
+\definecolor{rulec}{RGB}{205,221,248}
+
+\color{inkc}
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+\setlength{\parindent}{0pt}
+\linespread{1.02}
+
+%==================== Section headings ====================
+\titleformat{\section}
+  {\sffamily\large\bfseries\color{accentd}}
+  {}{0pt}{}
+  [{\vspace{2pt}\color{rulec}\titlerule[1.2pt]}]
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+
+%==================== Helpers ====================
+\newcommand{\entry}[2]{%
+  \par\vspace{1pt}%
+  {\sffamily\bfseries\color{inkc}#1}\hfill{\small\itshape\color{mutedc}#2}\par
+  \vspace{0.5pt}}
+\newcommand{\role}[1]{{\small\color{accentd}\sffamily #1}\par\vspace{1pt}}
+
+\setlist[itemize]{leftmargin=1.4em, topsep=1pt, itemsep=1pt, parsep=0pt, label={\color{accent}\small$\bullet$}}
+
+\newcommand{\circphoto}[4]{%
+  \begin{tikzpicture}
+    \clip (0,0) circle (#2);
+    \node at (0,#4) {\includegraphics[width=#3]{#1}};
+    \draw[rulec, line width=1.2pt] (0,0) circle (#2);
+  \end{tikzpicture}}
+
+\begin{document}
+\pagestyle{empty}
+
+%==================== Header ====================
+\begin{minipage}[c]{0.72\textwidth}
+  {\sffamily\fontsize{26}{30}\selectfont\bfseries\color{accentd}Bowen Lv}\quad
+  {\sffamily\large\color{mutedc}吕博文}\\[4pt]
+  {\sffamily\color{inkc}Ph.D. Student, Department of Computer Science, Tsinghua University}\\[2pt]
+  {\small\color{mutedc}Research: LLM Post-Training\,·\,Reinforcement Learning\,·\,GUI / Computer-Use Agents}\\[8pt]
+  {\small
+   \faEnvelope[regular]~\href{mailto:lvbowen1228@gmail.com}{lvbowen1228@gmail.com}\quad
+   \faPhone*~(+86) 183-3728-3380\\[3pt]
+   \faGlobe~\href{https://extreme1228.github.io/extreme1228/}{extreme1228.github.io/extreme1228}\quad
+   \faGoogle~\href{https://scholar.google.com/citations?user=5JW6fqwAAAAJ&hl=zh-CN}{Google Scholar}}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.24\textwidth}
+  \raggedleft\circphoto{photo.jpg}{1.85cm}{3.7cm}{-0.55cm}
+\end{minipage}
+
+\vspace{2pt}
+
+%==================== Education ====================
+\section{Education}
+\entry{Tsinghua University \quad Department of Computer Science and Technology (KEG Lab)}{2025 -- Present}
+\role{Ph.D. in Computer Science\;·\;Advisor: Prof. Yuxiao Dong\;·\;Focus: LLM + Reinforcement Learning}
+
+\entry{Tongji University \quad School of Electronic and Information Engineering}{2021 -- 2025}
+\role{B.Eng. in Computer Science (Elite CS Class)\;·\;Rank 1 / 20 in major}
+
+%==================== Experience ====================
+\section{Experience}
+\entry{Zhipu AI (智谱) \quad Research Intern --- LLM Post-Training \& GUI Agent RL}{Feb 2025 -- Present}
+\role{One year (and ongoing) on large-model post-training and RL for GUI / computer-use agents}
+\begin{itemize}
+  \item Built core agentic-RL training infrastructure: \textbf{AgentRL}, a from-scratch, highly asynchronous, train--inference-decoupled online RL framework with Dockerized multi-environment deployment and high-concurrency rollout for multi-task, multi-turn training.
+  \item Led verifiable task synthesis and online RL for computer-use agents, reaching open-source SOTA on OSWorld / ScienceBoard (\textbf{ScaleCUA}, first author; details below).
+  \item Leading \textbf{Auto-Post-Train (APT)} --- an \textbf{AI-for-AI, self-improving} multi-agent post-training system where a Conductor orchestrates env / task / rollout / train workers to fully automate the entire loop --- \textbf{data collection, environment adaptation, task construction, rollout, quality auditing, and model training} --- so models keep self-improving with minimal human intervention.
+\end{itemize}
+
+%==================== Publications ====================
+\section{Selected Publications}
+% —— ScaleCUA highlighted ——
+\entry{ScaleCUA: Scaling Computer Use Agents with Verifiable Task Synthesis and Efficient Online RL}{2026, under review}
+\role{\textbf{Bowen Lv} (first author)}
+\begin{itemize}
+  \item \textbf{ScaleCUA} pairs verifiable task synthesis with efficient online RL to break the data-scarcity and RL-inefficiency bottlenecks of computer-use agents; its \textbf{VeriGen} pipeline scales to 100+ concurrent workers via a shared Docker interaction probe, yielding 24K+ verifiable tasks and nearly 3K high-quality RL tasks.
+  \item Training-side \textbf{Frontier Sampling} (rollouts to the model's learning frontier) and \textbf{Visual Context Segmentation} (sliding-window visual context, 2.83$\times$ speedup); with Qwen3.5-9B, reaches \textbf{68.7\% on OSWorld} and \textbf{54.0\% on ScienceBoard} --- new open-source SOTA, surpassing larger models such as EvoCUA-32B and Kimi K2.5.
+\end{itemize}
+
+\entry{AgentRL: Scaling Agentic Reinforcement Learning with a Multi-Turn, Multi-Task Framework}{Preprint, 2025}
+\role{Hanchen Zhang, Xiao Liu, \textbf{Bowen Lv}, et al.\quad\faExternalLink*~\href{https://arxiv.org/abs/2510.04206}{arXiv:2510.04206}}
+\begin{itemize}
+  \item A multi-task, multi-turn agentic-RL framework; after RL, average performance on AgentBench surpasses leading closed-source APIs (Claude-4, GPT-5).
+\end{itemize}
+
+\entry{KARL: Reinforcement Learning for LLM Agents on Multi-Turn Knowledge-Intensive Agentic Tasks}{ACL 2026 (Main)}
+\role{Xueqiao Sun, Xiao Liu, \textbf{Bowen Lv}, et al.}
+\begin{itemize}
+  \item An RL method for multi-turn, knowledge-intensive agentic tasks; accepted to the ACL 2026 main conference.
+\end{itemize}
+
+\entry{Focus on What Matters: Separated Models for Visual-Based RL Generalization}{NeurIPS 2024}
+\role{Di Zhang, \textbf{Bowen Lv}, et al.\quad\faExternalLink*~\href{https://arxiv.org/abs/2410.10834}{arXiv:2410.10834}}
+\begin{itemize}
+  \item Separated models that improve generalization of visual RL in complex environments; published at NeurIPS 2024 (\textbf{second author}).
+\end{itemize}
+
+\entry{GLM-5V-Turbo: Toward a Native Foundation Model for Multimodal Agents}{Preprint, 2026}
+\role{Wenyi Hong, Xiaotao Gu, \ldots, \textbf{Bowen Lv}, \ldots, GLM-V Team\quad\faExternalLink*~\href{https://arxiv.org/abs/2604.26752}{arXiv:2604.26752}}
+\begin{itemize}
+  \item GLM-V team technical report on a native multimodal-agent foundation model; contributed to GUI-agent post-training.
+\end{itemize}
+
+%==================== Awards ====================
+\section{Awards \& Competitions}
+\entry{Programming Contests}{2022 -- 2024}
+\begin{itemize}
+  \item CCPC National Invitational (Guangdong) \textbf{Gold}; ICPC Nanjing \textbf{Silver} and Hong Kong \textbf{Silver}; CCCC individual \textbf{National Second Prize} (all 2024).
+\end{itemize}
+\entry{Honors}{2021 -- 2025}
+\begin{itemize}
+  \item Shanghai Outstanding Graduate (2025); National Scholarship (2022); Tongji SEIE Qidi Scholarship (2023).
+\end{itemize}
+
+\end{document}
