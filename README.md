@@ -23,9 +23,10 @@ Large Language Model (LLM) post-training, Reinforcement Learning (RL), and GUI /
   *arXiv preprint, 2026.* — 68.7% OSWorld / 54.0% ScienceBoard (open-source SOTA)<br>
   [[arXiv]](https://arxiv.org/abs/2607.11185) [[PDF]](https://arxiv.org/pdf/2607.11185) [[Code]](https://github.com/THUDM/SCALE-CUA)
 
-- Xueqiao Sun, Xiao Liu, **Bowen Lv**, *et al.*
+- Xueqiao Sun, Xiao Liu, **Bowen Lv**, Hanchen Zhang, Bohao Jing, Zehan Qi, Yifan Xu, Yuxiao Dong, Jie Tang<br>
   **KARL: Reinforcement Learning for LLM Agents on Multi-Turn Knowledge-Intensive Agentic Tasks**
-  *ACL 2026 main conference.*
+  *ACL 2026 Long Papers.* — Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics, pp. 47539–47558.<br>
+  [[ACL Anthology]](https://aclanthology.org/2026.acl-long.2196/) [[PDF]](https://aclanthology.org/2026.acl-long.2196.pdf) [[DOI]](https://doi.org/10.18653/v1/2026.acl-long.2196)
 
 - Wenyi Hong, Xiaotao Gu, ... , **Bowen Lv**, ... , GLM-V Team
   **GLM-5V-Turbo: Toward a Native Foundation Model for Multimodal Agents**
