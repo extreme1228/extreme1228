@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Post-training, AgentRL, and computer-use agent interview review notes by Bowen Lv.">
+    <title>Post-training / CUA 面试复盘 | Bowen Lv</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page article-page">
+        <header class="hero article-hero" id="top">
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Back Home</a>
+                <a href="#map" class="nav-link">Question Map</a>
+                <a href="#frameworks" class="nav-link">Frameworks</a>
+                <a href="#checklist" class="nav-link">Checklist</a>
+            </nav>
+
+            <div class="article-hero-copy">
+                <p class="eyebrow">Interview Review</p>
+                <h1 class="name">Post-training / AgentRL / CUA 面试复盘</h1>
+                <p class="subtitle">这是一份面向同学和后来者的公开版整理：把若干场 2026 年夏天的技术面与 HR 面经历，脱敏后归纳成问题地图、考察点和准备框架。</p>
+                <div class="hero-actions">
+                    <a href="#map" class="btn btn-primary">看问题地图</a>
+                    <a href="#frameworks" class="btn btn-ghost">看回答框架</a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="section article-section is-visible">
+                <div class="section-header">
+                    <p class="section-kicker">Principle</p>
+                    <h2>公开版怎么写</h2>
+                </div>
+                <div class="notice-card">
+                    <p>这不是逐字题库，也不对应任何单家公司或单轮面试。为了适合公开分享，我只保留可复用的技术主题和准备方法，删去了面试官身份、公司内部信息、薪资细节和未公开项目细节。</p>
+                </div>
+                <div class="grid-3">
+                    <article class="card">
+                        <h3>读者视角</h3>
+                        <p>目标读者是准备 LLM post-training、Agent RL、GUI / computer-use agent 方向面试的同学。</p>
+                    </article>
+                    <article class="card">
+                        <h3>内容粒度</h3>
+                        <p>以主题聚类呈现：系统设计、异步 RL、训练规模、ScaleCUA、CUA 未来、HR 沟通。</p>
+                    </article>
+                    <article class="card">
+                        <h3>使用方式</h3>
+                        <p>把它当成复盘清单：先确认自己能讲清楚项目，再补齐理论、工程 tradeoff 和未来判断。</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section article-section is-visible" id="map">
+                <div class="section-header">
+                    <p class="section-kicker">Question Map</p>
+                    <h2>高频问题地图</h2>
+                </div>
+                <div class="table-card">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>主题</th>
+                                <th>典型问法</th>
+                                <th>真正考察什么</th>
+                                <th>准备重点</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>自我介绍</td>
+                                <td>简单介绍自己和项目经历。</td>
+                                <td>能否快速建立可信度，并把面试引到自己的强项。</td>
+                                <td>90 秒讲清研究方向、核心项目、个人贡献和结果。</td>
+                            </tr>
+                            <tr>
+                                <td>AgentRL 框架</td>
+                                <td>RL 框架怎么设计? Rollout 和 train 怎么解耦?</td>
+                                <td>是否真正做过系统，而不是只理解论文概念。</td>
+                                <td>画出模块：controller、rollout workers、trainer、queue、evaluator、environment pool。</td>
+                            </tr>
+                            <tr>
+                                <td>异步 RL</td>
+                                <td>为什么异步? 相比同步的优势是什么? staleness / off-policy 怎么处理?</td>
+                                <td>能否同时讲清吞吐、资源利用率、样本新鲜度和训练稳定性。</td>
+                                <td>准备同步瓶颈、异步收益、策略版本、importance correction、过滤策略和经验结论。</td>
+                            </tr>
+                            <tr>
+                                <td>工程问题</td>
+                                <td>最大的问题是什么? 怎么解决? 最大训练过多大模型?</td>
+                                <td>是否经历过真实 scale 下的失败、排查和取舍。</td>
+                                <td>准备一个具体事故：症状、定位、方案、收益、遗留问题。</td>
+                            </tr>
+                            <tr>
+                                <td>ScaleCUA</td>
+                                <td>介绍方法细节，数据怎么构造，多样性怎么保证，评测怎么设计?</td>
+                                <td>是否能把方法拆成问题、数据、训练、评估、消融和局限。</td>
+                                <td>讲清 VeriGen、Frontier Sampling、Visual Context Segmentation、benchmark 和泛化。</td>
+                            </tr>
+                            <tr>
+                                <td>长程任务 RL</td>
+                                <td>credit assignment 怎么做? PPO / GRPO / critic 怎么看?</td>
+                                <td>是否理解 agent 任务里 reward 稀疏、多轮依赖和 value 估计困难。</td>
+                                <td>准备 token-level、step-level、trajectory-level 三层归因和各自风险。</td>
+                            </tr>
+                            <tr>
+                                <td>CUA 未来</td>
+                                <td>未来 CUA 会是什么架构? GUI 是否有前景? 和 coding 怎么结合?</td>
+                                <td>是否有技术判断，而不是只复述当前工作。</td>
+                                <td>从 foundation model、environment interface、memory、planner、verifier、human handoff 展开。</td>
+                            </tr>
+                            <tr>
+                                <td>HR / 反问</td>
+                                <td>实习时间、面试进展、离职动机、对团队的考虑、薪资预期。</td>
+                                <td>匹配度、稳定性、沟通成熟度和真实动机。</td>
+                                <td>保持一致叙事：为什么换方向、为什么这个团队、你能贡献什么。</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="section article-section is-visible" id="frameworks">
+                <div class="section-header">
+                    <p class="section-kicker">Answer Frameworks</p>
+                    <h2>几个好用的回答框架</h2>
+                </div>
+                <div class="stack">
+                    <article class="card guide-card">
+                        <p class="guide-index">01</p>
+                        <div>
+                            <h3>自我介绍：把时间线变成能力线</h3>
+                            <p>不要按简历流水账念。更好的结构是：我做什么方向 → 为什么重要 → 我做过哪两个代表项目 → 我的个人贡献是什么 → 这些经历为什么和这个岗位相关。</p>
+                            <ul class="list">
+                                <li>一句话定位：LLM post-training / RL / computer-use agents。</li>
+                                <li>项目一讲系统能力：AgentRL、异步 rollout、训练框架、工程 scale。</li>
+                                <li>项目二讲方法能力：ScaleCUA、数据合成、online RL、评测和泛化。</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="card guide-card">
+                        <p class="guide-index">02</p>
+                        <div>
+                            <h3>AgentRL：先系统图，再讲 tradeoff</h3>
+                            <p>面试官通常不是只想听“用了异步”，而是想知道你为什么做这个设计、它解决了哪个瓶颈、又带来了哪些新问题。</p>
+                            <ul class="list">
+                                <li>从同步瓶颈讲起：环境慢、多轮长、rollout 方差大、trainer 容易等数据。</li>
+                                <li>再讲异步收益：提高 GPU 利用率、隔离环境波动、支持多任务高并发采样。</li>
+                                <li>最后主动讲代价：policy staleness、off-policy 偏差、版本管理、样本过滤和稳定性监控。</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="card guide-card">
+                        <p class="guide-index">03</p>
+                        <div>
+                            <h3>ScaleCUA：把 paper 讲成可复现 pipeline</h3>
+                            <p>只讲结论不够，要能把方法拆开：任务从哪里来，验证信号是什么，训练怎么采样，为什么能提升，怎么证明不是 benchmark overfit。</p>
+                            <ul class="list">
+                                <li>问题：GUI agent 缺少大量可验证、多样、可训练的交互任务。</li>
+                                <li>方法：用可验证任务合成扩大任务空间，再用 online RL 聚焦 frontier 样本。</li>
+                                <li>评估：不仅报成功率，也要讲数据多样性、训练 reward、test-set 泛化和失败类型。</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="card guide-card">
+                        <p class="guide-index">04</p>
+                        <div>
+                            <h3>未来判断：给出架构，而不是口号</h3>
+                            <p>被问到 CUA、GUI、coding agent 的未来时，最好不要只说“会融合”。可以给一个具体系统形态：模型、工具、环境、记忆、验证器和人类接管机制如何协作。</p>
+                            <ul class="list">
+                                <li>GUI 不会消失，因为真实世界大量 workflow 仍然被 GUI 承载。</li>
+                                <li>Coding 更适合生成和修改结构化接口，GUI 更适合接管没有 API、状态复杂或需要视觉确认的任务。</li>
+                                <li>长期看，agent 会在 API / code / GUI 之间动态选择最低成本、最高可靠性的行动通道。</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section article-section is-visible" id="checklist">
+                <div class="section-header">
+                    <p class="section-kicker">Checklist</p>
+                    <h2>面前自查清单</h2>
+                </div>
+                <div class="two-col">
+                    <article class="card">
+                        <h3>技术面前必须能答</h3>
+                        <ul class="list numbered-list">
+                            <li>你的 RL 框架模块边界是什么?</li>
+                            <li>为什么 rollout 和 train 要分离?</li>
+                            <li>异步引入的 staleness 怎么被观测、控制和缓解?</li>
+                            <li>你遇到过最硬的工程问题是什么，最后指标提升了多少?</li>
+                            <li>ScaleCUA 的关键增益来自数据、采样还是训练 recipe?</li>
+                            <li>如果 test-set 不涨但 training reward 涨，你怎么诊断?</li>
+                            <li>GUI agent 的下一代架构和 coding agent 有什么关系?</li>
+                        </ul>
+                    </article>
+                    <article class="card highlight">
+                        <h3>反问问题模板</h3>
+                        <ul class="list">
+                            <li>团队现在最想解决的是模型能力、数据、环境、评测还是训练系统?</li>
+                            <li>agent 项目的成功指标是什么：benchmark、用户任务成功率、成本还是稳定性?</li>
+                            <li>团队如何看待 online RL、synthetic data 和真实用户反馈之间的关系?</li>
+                            <li>如果我加入，前三个月最可能负责哪类问题?</li>
+                            <li>团队对 GUI agent、coding agent、tool-use agent 的边界判断是什么?</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 Bowen Lv. Public interview review notes.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

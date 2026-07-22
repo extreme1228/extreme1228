@@ -18,9 +18,10 @@ Large Language Model (LLM) post-training, Reinforcement Learning (RL), and GUI /
 
 📝 **Publications**
 
-- **Bowen Lv**, Zehan Qi
+- **Bowen Lv**, Xiao Liu, Yanyu Ren, Hanyu Lai, Bohao Jing, Hanchen Zhang, Yanxiao Zhao, Shuntian Yao, Jie Tang, Yuxiao Dong<br>
   **ScaleCUA: Scaling Computer Use Agents with Verifiable Task Synthesis and Efficient Online RL** *(first author)*
-  *Preprint, 2026.* — 68.7% OSWorld / 54.0% ScienceBoard (open-source SOTA)
+  *arXiv preprint, 2026.* — 68.7% OSWorld / 54.0% ScienceBoard (open-source SOTA)<br>
+  [[arXiv]](https://arxiv.org/abs/2607.11185) [[PDF]](https://arxiv.org/pdf/2607.11185) [[Code]](https://github.com/THUDM/SCALE-CUA)
 
 - Xueqiao Sun, Xiao Liu, **Bowen Lv**, *et al.*
   **KARL: Reinforcement Learning for LLM Agents on Multi-Turn Knowledge-Intensive Agentic Tasks**
@@ -69,4 +70,3 @@ Large Language Model (LLM) post-training, Reinforcement Learning (RL), and GUI /
 📄 [Google Scholar](https://scholar.google.com/citations?user=5JW6fqwAAAAJ&hl=zh-CN)
 
 ---
-
